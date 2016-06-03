@@ -1,0 +1,16 @@
+<div class="page-header">
+  <h1>Search</h1>
+
+</div>
+<% @comps.comparables.each do |comparable| %>
+  <% score = comparable.first %>
+  <% deep_search_result = comparable.last %>
+
+  <p>
+    Score: <%= score %>
+  </p>
+
+  <p>
+    <%= number_to_currency(deep_search_result.price) %>
+  </p>
+<% end %>
